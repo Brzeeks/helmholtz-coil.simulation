@@ -1,5 +1,5 @@
 # -----------------------------------------------------------
-# Computer code calculating wanted coil specifications
+# Computer code calculating and graphing wanted coil specifications
 #
 # (C) 2022 Andrea Brzica, Zagreb, Croatia
 # email andrea.brzica@hotmail.com
