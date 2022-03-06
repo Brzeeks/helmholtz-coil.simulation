@@ -79,7 +79,7 @@ def graph_mfield_core(Sb,b,D,r): #function for graphing magnetic field of magnet
     print("-----------------------------------------------------------")
     return
 
-def graph_mfield_coil_core(N,I,b,D,r,Sb):
+def graph_mfield_coil_core(N,I,b,D,r,Sb): #function for graphin the magnetic field of a coil with a core
     print("Graphing the magnetic field of a single coil with a core...")
     x = np.linspace(-3*r,3*r,100)
     q=((4*3.14e-7)/2)*((N*I)/b)*((x+D/2+b/2)/(np.sqrt((x+D/2+b/2)**2 + r**2))-(x+D/2-b/2)/(np.sqrt((x+D/2-b/2)**2 + r**2)))+((Sb)/2)*((x+D/2+b/2)/(np.sqrt((x+D/2+b/2)**2 + r**2))-(x+D/2-b/2)/(np.sqrt((x+D/2-b/2)**2 + r**2)))
@@ -91,7 +91,7 @@ def graph_mfield_coil_core(N,I,b,D,r,Sb):
     return
     
 
-def graph_mfield_coil_core_both(N,I,b,D,r,Sb): #function for graphing magnetic field strenght in front of coil with core
+def graph_mfield_coil_core_both(N,I,b,D,r,Sb): #function for graphing magnetic field of a coil, core and coil with core
     print("Graphing the magnetic field of a single coil, single core, and a coil with a core...")
     x = np.linspace(-3*r,3*r,100)
     y = ((4*3.14e-7)/2)*((N*I)/b)*((x+D/2+b/2)/(np.sqrt((x+D/2+b/2)**2 + r**2))-(x+D/2-b/2)/(np.sqrt((x+D/2-b/2)**2 + r**2)))
@@ -107,7 +107,7 @@ def graph_mfield_coil_core_both(N,I,b,D,r,Sb): #function for graphing magnetic f
     print("-----------------------------------------------------------")
     return
 
-def graph_mfield_2coils(N,I,b,D,r,):
+def graph_mfield_2coils(N,I,b,D,r,): #function for graphing the magnetic field between two coils
     print("Graphing the magnetic field between two coils...")
     x = np.linspace(-3*r,3*r,100)
     y = ((4*3.14e-7)/2)*((N*I)/b)*((x+D/2+b/2)/(np.sqrt((x+D/2+b/2)**2 + r**2))-(x+D/2-b/2)/(np.sqrt((x+D/2-b/2)**2 + r**2)))+((4*3.14e-7)/2)*((N*I)/b)*((x-D/2+b/2)/(np.sqrt((x-D/2+b/2)**2 + r**2))-(x-D/2-b/2)/(np.sqrt((x-D/2-b/2)**2 + r**2)))
@@ -118,7 +118,7 @@ def graph_mfield_2coils(N,I,b,D,r,):
     print("-----------------------------------------------------------")
     return
     
-def graph_mfield_2cores(N,I,b,D,r,Sb):
+def graph_mfield_2cores(N,I,b,D,r,Sb): #function for graphing the magnetic field between two cores
     print("Graphing the magnetic field between two cores...")
     x = np.linspace(-3*r,3*r,100)
     z = (Sb/2)*((x+D/2+b/2)/(np.sqrt((x+D/2+b/2)**2 + r**2))-(x+D/2-b/2)/(np.sqrt((x+D/2-b/2)**2 + r**2)))+(Sb/2)*((x-D/2+b/2)/(np.sqrt((x-D/2+b/2)**2 + r**2))-(x-D/2-b/2)/(np.sqrt((x-D/2-b/2)**2 + r**2)))
@@ -129,7 +129,7 @@ def graph_mfield_2cores(N,I,b,D,r,Sb):
     print("-----------------------------------------------------------")
     return
     
-def graph_mfield_2coil_cores(N,I,b,D,r,Sb):
+def graph_mfield_2coil_cores(N,I,b,D,r,Sb): #function for graphing the magnetic field between two coils with cores
     print("Graphing the magnetic field between two coils with cores...")
     x = np.linspace(-3*r,3*r,100)
     q=((4*3.14e-7)/2)*((N*I)/b)*((x+D/2+b/2)/(np.sqrt((x+D/2+b/2)**2 + r**2))-(x+D/2-b/2)/(np.sqrt((x+D/2-b/2)**2 + r**2)))+((4*3.14e-7)/2)*((N*I)/b)*((x-D/2+b/2)/(np.sqrt((x-D/2+b/2)**2 + r**2))-(x-D/2-b/2)/(np.sqrt((x-D/2-b/2)**2 + r**2)))+((4*3.14e-7)/2)*((N*I)/b)*((x+D/2+b/2)/(np.sqrt((x+D/2+b/2)**2 + r**2))-(x+D/2-b/2)/(np.sqrt((x+D/2-b/2)**2 + r**2)))+(Sb/2)*((x+D/2+b/2)/(np.sqrt((x+D/2+b/2)**2 + r**2))-(x+D/2-b/2)/(np.sqrt((x+D/2-b/2)**2 + r**2)))+(Sb/2)*((x-D/2+b/2)/(np.sqrt((x-D/2+b/2)**2 + r**2))-(x-D/2-b/2)/(np.sqrt((x-D/2-b/2)**2 + r**2)))
@@ -140,7 +140,7 @@ def graph_mfield_2coil_cores(N,I,b,D,r,Sb):
     print("-----------------------------------------------------------")
     return
 
-def graph_mfield_2coils_2cores_both(N,I,b,D,r,Sb):
+def graph_mfield_2coils_2cores_both(N,I,b,D,r,Sb): #function for graphing the magnetic field between two coils, two cores, and two coils with cores
     print("Graphing the magnetic field between two coils, cores, and coils with cores")
     x = np.linspace(-3*r,3*r,100)
     y = ((4*3.14e-7)/2)*((N*I)/b)*((x+D/2+b/2)/(np.sqrt((x+D/2+b/2)**2 + r**2))-(x+D/2-b/2)/(np.sqrt((x+D/2-b/2)**2 + r**2)))+((4*3.14e-7)/2)*((N*I)/b)*((x-D/2+b/2)/(np.sqrt((x-D/2+b/2)**2 + r**2))-(x-D/2-b/2)/(np.sqrt((x-D/2-b/2)**2 + r**2)))
